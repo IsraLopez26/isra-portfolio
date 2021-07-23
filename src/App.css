@@ -1,38 +1,405 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root{
+  
+  --header-height: 3rem;
+
+  /* ==== Colores ==== */
+  /* Main color */
+  --hue-color: 230;
+
+  /* HSL colors */
+  --first-color: hsl(var(--hue-color),69%,61%);
+  --first-color-second: hsl(var(--hue-color),69%,61%);
+  --first-color-alt: hsl(var(--hue-color),57%,53%);
+  --first-color-lighter: hsl(var(--hue-color),92%,85%);
+  --title-color: hsl(var(--hue-color),8%,15%);
+  --text-color: hsl(var(--hue-color),8%,45%);
+  --text-color-light: hsl(var(--hue-color),8%,65%);
+  --input-color: hsl(var(--hue-color),70%,96%);
+  --body-color: hsl(var(--hue-color),60%,99%);
+  --container-color: #FFF;
+  --scroll-bar-color:hsl(var(--hue-color),12%,90%);
+  --scroll-thumb-color:hsl(var(--hue-color),12%,80%);
+
+  /* ==== Font Sizes ==== */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /* ==== Font Weight ==== */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* ==== Margin Bottom ==== */
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /* ==== Z index ==== */
+  --z-tooltip:10;
+  --z-fixed:100;
+  --z-modal:1000;
+
+
+
+    /* HSL colors DARK THEME*/
+  --first-color-second-DT: hsl(var(--hue-color),30%,8%);
+  --title-color-DT: hsl(var(--hue-color),8%,95%);
+  --text-color-DT: hsl(var(--hue-color),8%,75%);
+  --input-color-DT: hsl(var(--hue-color),29%,16%);
+  --body-color-DT: hsl(var(--hue-color),28%,12%);
+  --container-color-DT: hsl(var(--hue-color),29%,16%);
+  transition: .3s;
+}
+
+@media screen and (min-width:968px){
+  :root{
+    /* ==== Font Sizes ==== */
+    --big-font-size: 3rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/* === Default Styles === */
+h1,h2,h3,h4{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==== General Classes ====*/
+.darkTheme{
+
+  --first-color-second: hsl(var(--hue-color),30%,8%);
+  --title-color: hsl(var(--hue-color),8%,95%);
+  --text-color: hsl(var(--hue-color),8%,75%);
+  --input-color: hsl(var(--hue-color),29%,16%);
+  --body-color: hsl(var(--hue-color),28%,12%);
+  --container-color: hsl(var(--hue-color),29%,16%);
+  transition: .3s;
+}
+.section{
+  padding: 2rem 0 4rem;
+}
+.section_title{
+  font-size: var(--h1-font-size);
+  text-align: center;
+}
+.section_subtitle{
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ==== Layout ==== */
+.container{
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grid{
+  display: grid;
+  gap: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* ==== Icons ==== */
+.nav_icon{
+  font-size: 1.2rem;
+}
+
+.nav_icon_close{
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--first-color);
+
+}
+
+.nav_icon_close:hover{
+  color: var(--first-color-alt);
+}
+
+.skills_icon,.skills_arrow{
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.skills_icon{
+  margin-right: var(--mb-0-75);
+}
+
+.skills_arrow{
+  margin-left: auto;
+  transition: .4s;
+}
+
+.quali_icon{
+  font-size: 1.8rem;
+  margin-right: var(--mb-0-5);
+}
+.quali_icon2{
+  font-size: 1.5rem;
+  margin-right: var(--mb-0-5);
+}
+.services_icon{
+  display: block;
+  font-size: 1.5rem;
+  color:var(--first-color);
+  margin-bottom: var(--mb-1);
+}
+.services_modal-close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+.services_modal-icon{
+  color: var(--first-color);
+  margin-right: var(--mb-0-5);
+  margin-top: 4px;
+}
+.contact_icon{
+  font-size: 1.7rem;
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+  
+}
+.scrollup_icon{
+  font-size: 1.5rem;
+  color: #FFF;
+  margin-top: 5px;
+
+}
+.changetheme_icon{
+  font-size: 1.4rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+  /* transform: translateY(3px); */
+}
+.changetheme_icon:hover{
+  color: var(--first-color);
+}
+/* ==== Home ==== */
+.home_blob{
+  width: 240px;
+  fill: var(--first-color);
+  margin-left: 3rem;
+}
+
+.home_scroll-mouse{
+  font-size: 1.4rem;
+}
+
+.home_scroll-arrow{
+  font-size: 1.25rem;
+}
+
+/* ==== Skills ==== */
+.skills_html{
+  width: 100%;
+}
+.skills_css{
+  width: 100%;
+}
+.skills_js{
+  width: 100%;
+}
+.skills_react{
+  width: 100%;
+}
+.skills_nodejs{
+  width: 100%;
+}
+.skills_mongo{
+  width: 100%;
+}
+.skills_python{
+  width: 100%;
+}
+.skills_api{
+  width: 100%;
+}
+
+/* ==== Buttons ==== */
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color:#FFF;
+  padding: 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+}
+
+.button:hover{
+  background-color: var(--first-color-alt);
+}
+
+.button_icon{
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: .3s;
+}
+.button:hover .button_icon_service{
+  transform: translateX(.3rem);
+}
+
+.button_icon_service{
+  font-size: 1.2rem;
+  margin-left: var(--mb-0-5);
+  transition: .3s;
+  font-weight: var(--font-medium);
+}
+
+.button--flex{
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.button--small{
+  padding: .75rem 1rem;
+}
+.button--small:hover{
+  cursor: pointer;
+}
+.button--link{
+  padding: 0;
+  background-color: transparent;
+  color: var(--first-color);
+}
+.button--link:hover{
+  background-color: transparent;
+  color: var(--first-color-alt);
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover .button_icon_portfolio{
+  transform: translateX(0.25rem);
+  transition: .3s;
+}
+.button_icon_portfolio{
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: .3s;
+}
+.button--white{
+  background-color: #FFF;
+  color: var(--first-color);
+}
+.button--white:hover{
+  background-color: #FFF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* ==== Media Queries ==== */
+@media screen and (max-width:350px){
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+
   }
-  to {
-    transform: rotate(360deg);
+  body{
+    margin:0;
   }
+  .home_blob{
+      width: 160px;
+      
+    }
+}
+@media screen and (min-width:568px){
+  .home_blob{
+      width: 260px;
+      fill: var(--first-color);
+      margin-left: 1rem;
+    }
+    body{
+    margin:0;
+  }
+}
+
+@media screen and (min-width:768px){
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  body{
+    margin:0;
+  }
+  .section{
+    padding: 6rem 0 2rem;
+  }
+  .section_subtitle{
+    margin-bottom: 4rem;
+  }
+  .nav_icon,.nav_icon_close{
+    display: none;
+  }
+  .changetheme_icon{
+    margin: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .services_icon{
+  font-size: 2rem;
+  }
+  .home_blob{
+      width: 280px;
+      fill: var(--first-color);
+      margin-left: .2rem;
+    }
+}
+@media screen and (min-width:1024px){
+  .home_blob{
+      width: 340px;
+      fill: var(--first-color);
+      margin-left: 1rem;
+    }
+}
+footer.darkTheme,div.darkTheme{
+
+  --first-color-second: hsl(var(--hue-color),30%,8%);
+  --title-color: hsl(var(--hue-color),8%,95%);
+  --text-color: hsl(var(--hue-color),8%,75%);
+  --input-color: hsl(var(--hue-color),29%,16%);
+  --body-color: hsl(var(--hue-color),28%,12%);
+  --container-color: hsl(var(--hue-color),29%,16%);
+  transition: .3s;
 }
