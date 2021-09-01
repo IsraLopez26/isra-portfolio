@@ -2,7 +2,7 @@ import React from 'react'
 import { AboutSection, AboutSectionTitle, AboutSectionSubtitle, AboutContainer, AboutImg, AboutData, AboutDescription, AboutInfo, AboutInfoTitle, AboutInfoName, AboutButtons, AboutButton } from './AboutStyle'
 import { HiOutlineDownload } from 'react-icons/hi'
 import img1 from '../../images/about.svg'
-import cv from '../../images/IsraLopezCV.pdf'
+import cv from '../../images/IsraelLopezCV_.pdf'
 import '../../App.css'
 
 const About = () => {
