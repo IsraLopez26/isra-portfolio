@@ -2,7 +2,7 @@ import React from 'react'
 import { AboutSection, AboutSectionTitle, AboutSectionSubtitle, AboutContainer, AboutImg, AboutData, AboutDescription, AboutInfo, AboutInfoTitle, AboutInfoName, AboutButtons, AboutButton } from './AboutStyle'
 import { HiOutlineDownload } from 'react-icons/hi'
 import img1 from '../../images/about.svg'
-import cv from '../../images/IsraelLopezCV_.pdf'
+import cv from '../../images/IsraelLopez_CV_english.pdf'
 import '../../App.css'
 
 const About = () => {
@@ -30,7 +30,7 @@ const About = () => {
               </div>
 
               <div>
-                <AboutInfoTitle>03</AboutInfoTitle>
+                <AboutInfoTitle>04</AboutInfoTitle>
                 <AboutInfoName>Companies <br /> Worked </AboutInfoName>
               </div>
             </AboutInfo>

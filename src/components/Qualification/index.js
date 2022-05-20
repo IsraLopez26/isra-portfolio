@@ -49,44 +49,6 @@ const Qualification = () => {
               {/*** * Qualification 1 * ***/}
               <QualiData>
                 <div>
-                  <QualiTitleH3>B.S. Digital Systems and Robotics Engineer</QualiTitleH3>
-                  <QualiSubtitleSpan>
-                    ITESM - CEM
-                  </QualiSubtitleSpan>
-                  <QualiCalendar>
-                    <FaRegCalendarAlt />2014 - 2018
-                  </QualiCalendar>
-                </div>
-                <div>
-                  <QualiRounder></QualiRounder>
-                  <QualiLine></QualiLine>
-                </div>
-              </QualiData>
-              {/*** * Qualification 1 finish * ***/}
-
-              {/*** * Qualification 2 * ***/}
-              <QualiData>
-                <div></div>
-                <div>
-                  <QualiRounder></QualiRounder>
-                  <QualiLine></QualiLine>
-                </div>
-                <div>
-                  <QualiTitleH3>Abacus College</QualiTitleH3>
-                  <QualiSubtitleSpan>
-                    Oxford University
-                  </QualiSubtitleSpan>
-                  <QualiCalendar>
-                    <FaRegCalendarAlt />2013
-                  </QualiCalendar>
-                </div>
-
-              </QualiData>
-              {/*** * Qualification 2 finish * ***/}
-
-              {/*** * Qualification 3 * ***/}
-              <QualiData>
-                <div>
                   <QualiTitleH3>The Web Developer Bootcamp</QualiTitleH3>
                   <QualiSubtitleSpan>
                     Udemy
@@ -97,30 +59,43 @@ const Qualification = () => {
                 </div>
                 <div>
                   <QualiRounder></QualiRounder>
-                  {/* <QualiLine></QualiLine> */}
+                  <QualiLine></QualiLine>
                 </div>
               </QualiData>
-              {/*** * Qualification 3 finish * ***/}
 
-              {/*** * Qualification 4 * **}
               <QualiData>
                 <div></div>
                 <div>
                   <QualiRounder></QualiRounder>
-                  {/* <QualiLine></QualiLine> }
+                  <QualiLine></QualiLine>
                 </div>
                 <div>
-                  <QualiTitleH3>Web Designer</QualiTitleH3>
+                  <QualiTitleH3>B.S. Digital Systems and Robotics Engineer</QualiTitleH3>
                   <QualiSubtitleSpan>
-                    Peru - University
+                  ITESM - CEM
                   </QualiSubtitleSpan>
                   <QualiCalendar>
-                    <FaRegCalendarAlt />2009 - 2014
+                    <FaRegCalendarAlt />2014 - 2018
                   </QualiCalendar>
                 </div>
 
               </QualiData>
-              {/*** * Qualification 4 finish * ***/}
+
+              <QualiData>
+                <div>
+                  <QualiTitleH3>Abacus College</QualiTitleH3>
+                  <QualiSubtitleSpan>
+                    Oxford University
+                  </QualiSubtitleSpan>
+                  <QualiCalendar>
+                    <FaRegCalendarAlt />2013
+                  </QualiCalendar>
+                </div>
+                <div>
+                  <QualiRounder></QualiRounder>
+                </div>
+              </QualiData>
+
 
             </QualiContent1>
             {/********* * CONTENT 1 FINISH* ********/}
@@ -132,9 +107,9 @@ const Qualification = () => {
               {/*** * Qualification 1 * ***/}
               <QualiData>
                 <div>
-                  <QualiTitleH3>Production Line Manager</QualiTitleH3>
+                  <QualiTitleH3>Frontend Developer</QualiTitleH3>
                   <QualiSubtitleSpan>
-                    {procter}
+                    Luxoft a DXC Company
                   </QualiSubtitleSpan>
                   <QualiCalendar>
                     <FaRegCalendarAlt />2021 - Present
@@ -155,7 +130,7 @@ const Qualification = () => {
                   <QualiLine></QualiLine>
                 </div>
                 <div>
-                  <QualiTitleH3>Process Engineer</QualiTitleH3>
+                  <QualiTitleH3>Robotics Engineer</QualiTitleH3>
                   <QualiSubtitleSpan>
                     {procter}
                   </QualiSubtitleSpan>

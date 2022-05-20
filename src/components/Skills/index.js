@@ -45,6 +45,30 @@ const Skills = () => {
 
               <SkillsListGridFront displayFront={displayFront}>
 
+              <SkillsData>
+                <SkillsTitleDiv>
+                  <SkillsName>React</SkillsName>
+                  <SkillsNumber>
+                    Strong
+                  </SkillsNumber>
+                </SkillsTitleDiv>
+                <SkillsBar>
+                  <SkillsPercentage className='skills_react'></SkillsPercentage>
+                </SkillsBar>
+              </SkillsData>
+
+              <SkillsData>
+                <SkillsTitleDiv>
+                  <SkillsName>NextJS</SkillsName>
+                  <SkillsNumber>
+                    Medium
+                  </SkillsNumber>
+                </SkillsTitleDiv>
+                <SkillsBar>
+                  <SkillsPercentage className='skills_react'></SkillsPercentage>
+                </SkillsBar>
+              </SkillsData>
+
                 <SkillsData>
                   <SkillsTitleDiv>
                     <SkillsName>HTML5</SkillsName>
@@ -78,18 +102,6 @@ const Skills = () => {
                   </SkillsTitleDiv>
                   <SkillsBar>
                     <SkillsPercentage className='skills_js'></SkillsPercentage>
-                  </SkillsBar>
-                </SkillsData>
-
-                <SkillsData>
-                  <SkillsTitleDiv>
-                    <SkillsName>React</SkillsName>
-                    <SkillsNumber>
-                      Strong
-                    </SkillsNumber>
-                  </SkillsTitleDiv>
-                  <SkillsBar>
-                    <SkillsPercentage className='skills_react'></SkillsPercentage>
                   </SkillsBar>
                 </SkillsData>
 
